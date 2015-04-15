@@ -11,13 +11,26 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.view.View.OnClickListener;
+import android.widget.TextView;
 import android.widget.Toast;
+import android.app.AlarmManager;
+import android.app.PendingIntent;
+import android.content.Intent;
+import android.widget.TimePicker;
+import android.widget.ToggleButton;
+
 
 /**
  * Created by narcis on 14/04/15.
  */
 public class SetAlarm extends Fragment {
     View rootView;
+//    AlarmManager alarmManager;
+//    private PendingIntent pendingIntent;
+//    private TimePicker alarmTimePicker;
+//    private static SetAlarm inst;
+//    private TextView alarmTextView;
+
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState){

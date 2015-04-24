@@ -19,6 +19,9 @@ import android.content.Intent;
 import android.widget.TimePicker;
 import android.widget.ToggleButton;
 
+import java.sql.Time;
+import java.util.Calendar;
+
 
 /**
  * Created by narcis on 14/04/15.
@@ -27,21 +30,58 @@ public class SetAlarm extends Fragment {
     View rootView;
 //    AlarmManager alarmManager;
 //    private PendingIntent pendingIntent;
-//    private TimePicker alarmTimePicker;
+    private TimePicker alarmTimePicker;
 //    private static SetAlarm inst;
 //    private TextView alarmTextView;
+    private int hourPicked;
+    private int minutePicked;
+
 
     @Nullable
     @Override
-    public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState){
+    public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         rootView = inflater.inflate(R.layout.setalarm_layout, container, false);
+        alarmTimePicker = (TimePicker) rootView.findViewById(R.id.timePicker);
+        alarmTimePicker.setIs24HourView(true);
+
+        Button button = (Button) rootView.findViewById(R.id.button);
+//        hour = alarmTimePicker.getCurrentHour();
+//        minute = alarmTimePicker.getCurrentMinute();
+
+        alarmTimePicker.setOnTimeChangedListener(new TimePicker.OnTimeChangedListener() {
+
+            public void onTimeChanged(TimePicker view, int hourOfDay, int minute) {
+                hourPicked = alarmTimePicker.getCurrentHour();
+                minutePicked = alarmTimePicker.getCurrentMinute();
+//                String hourString = Integer.toString(hourPicked);
+//                String minuteString = Integer.toString(minutePicked);
+//                Log.v("hour changed: ", hourString);
+//                Log.v("minute changed: ", minuteString);
+                }
+        });
 
 
-        Button button = (Button)rootView.findViewById(R.id.button);
+
+
+
         button.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
                 /* Perform action on click */
                 Log.v("","Alarm set");
+                Log.v("hour picked", Integer.toString(hourPicked));
+                Log.v("minute picked: ", Integer.toString(minutePicked));
+
+                final Calendar c2 = Calendar.getInstance();
+                int mHour2 = c2.get(Calendar.HOUR_OF_DAY);
+                int mMinute2 = c2.get(Calendar.MINUTE);
+
+                Log.v("current hour: ", Integer.toString(mHour2));
+                Log.v("current minute: ", Integer.toString(mMinute2));
+
+                long hoursRemaining = hourPicked - mHour2;
+                long minutesRemaining = minutePicked - mMinute2;
+                Log.v("remaning hours: ", Long.toString(hoursRemaining));
+                Log.v("remaining minutes: ", Long.toString(minutesRemaining));
 
 
                 AlertDialog alertDialog1 = new AlertDialog.Builder(

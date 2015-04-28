@@ -64,6 +64,7 @@ public class SetAlarm extends Fragment {
              final Calendar c2 = Calendar.getInstance();
              int mHour2 = c2.get(Calendar.HOUR_OF_DAY);
              int mMinute2 = c2.get(Calendar.MINUTE);
+             int mSecond2 = c2.get(Calendar.SECOND);
 
              Log.v("current hour: ", Integer.toString(mHour2));
              Log.v("current minute: ", Integer.toString(mMinute2));

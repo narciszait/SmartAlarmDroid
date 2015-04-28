@@ -69,6 +69,10 @@ public class MainActivity extends ActionBarActivity
                 //Settings
                 objFrament = new Settings();
                 break;
+            case 3:
+                //About page
+                objFrament = new AboutPage();
+                break;
         }
 
         // update the main content by replacing fragments
@@ -84,6 +88,12 @@ public class MainActivity extends ActionBarActivity
                 break;
             case 2:
                 mTitle = getString(R.string.title_section2);
+                break;
+            case 3:
+                mTitle = "Settings";
+                break;
+            case 4:
+                mTitle = "About";
                 break;
         }
     }

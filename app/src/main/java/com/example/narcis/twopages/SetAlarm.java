@@ -51,6 +51,8 @@ public class SetAlarm extends Fragment {
             public void onTimeChanged(TimePicker view, int hourOfDay, int minute) {
                  hourPicked = alarmTimePicker.getCurrentHour();
                  minutePicked = alarmTimePicker.getCurrentMinute();
+                Log.v("hour picked1", Integer.toString(hourPicked));
+                Log.v("minute picked1: ", Integer.toString(minutePicked));
             }
          });
 

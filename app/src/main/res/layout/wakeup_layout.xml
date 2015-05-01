@@ -21,5 +21,6 @@
         android:text="Wake Up"
         android:id="@+id/button3"
         android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true" />
+        android:layout_centerHorizontal="true"
+        style="@style/btnStyleGenoa" />
 </RelativeLayout>

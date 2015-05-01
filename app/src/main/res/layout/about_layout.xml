@@ -9,7 +9,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceLarge"
-        android:text="About Page"
+        android:text="About Smart Alarm &apos;Em"
         android:id="@+id/textView"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true" />
@@ -20,5 +20,6 @@
         android:text="Who made this app?"
         android:id="@+id/button3"
         android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true" />
+        android:layout_centerHorizontal="true"
+        style="@style/btnStyleGenoa" />
 </RelativeLayout>

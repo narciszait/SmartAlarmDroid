@@ -116,10 +116,19 @@ public class SetAlarm extends Fragment {
              Log.v("current hour: ", Integer.toString(mHour2));
              Log.v("current minute: ", Integer.toString(mMinute2));
 
-             hoursRemaining = Math.abs(hourPicked - mHour2);
+             hoursRemaining = hourPicked - mHour2;
              minutesRemaining = Math.abs(minutePicked - mMinute2);
              hoursRemainingString = Integer.toString(hoursRemaining);
              minutesRemainingString = Integer.toString(minutesRemaining);
+
+
+                    if (hoursRemaining < 0) {
+                        hoursRemaining = Math.abs(hoursRemaining) + 2;
+                    }
+
+
+
+
 
                  if (hoursRemaining > 10) {
                      Toast.makeText(getActivity(),
@@ -180,7 +189,7 @@ public class SetAlarm extends Fragment {
         }
 
         public void run() {
-            mBluetoothAdapter.cancelDiscovery();
+            //mBluetoothAdapter.cancelDiscovery();
             try {
                 mmSocket.connect();
 //                mHandler.obtainMessage(3, begin, i, buffer).sendToTarget();
@@ -282,7 +291,7 @@ public class SetAlarm extends Fragment {
                     writeMessage = writeMessage.substring(begin, end);
                     break;
                 case 2:
-                    Toast.makeText(getActivity(), "succes1", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(getActivity(), "Alarm set", Toast.LENGTH_SHORT).show();
 
                     break;
                 case 3:

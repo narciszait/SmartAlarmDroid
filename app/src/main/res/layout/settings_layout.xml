@@ -18,5 +18,6 @@
         android:text="Settings"
         android:id="@+id/button2"
         android:layout_alignParentBottom="true"
-        android:layout_alignRight="@+id/textView" />
+        android:layout_alignRight="@+id/textView"
+        style="@style/btnStyleGenoa" />
 </RelativeLayout>

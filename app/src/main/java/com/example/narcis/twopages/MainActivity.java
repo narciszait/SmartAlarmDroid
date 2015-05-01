@@ -40,9 +40,7 @@ public class MainActivity extends ActionBarActivity
      * Used to store the last screen title. For use in {@link #restoreActionBar()}.
      */
     private CharSequence mTitle;
-//    private BluetoothAdapter mBluetoothAdapter;
-//    BluetoothDevice mDevice;
-//    BluetoothConnection mConnectThread;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -59,29 +57,6 @@ public class MainActivity extends ActionBarActivity
                 (DrawerLayout) findViewById(R.id.drawer_layout));
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
-        //Bluetooth stuff here
-//        mBluetoothAdapter = BluetoothAdapter.getDefaultAdapter();
-//
-//        if (mBluetoothAdapter == null){
-//            Log.v("no bluetooth device", "");
-//        }
-//
-//        if (!mBluetoothAdapter.isEnabled()){
-//            Intent enableBtIntent = new Intent(BluetoothAdapter.ACTION_REQUEST_ENABLE);
-//            startActivityForResult(enableBtIntent, 1);
-//            Log.v("bluetooth enabled", "");
-//        }
-//
-//        Set<BluetoothDevice> pairedDevices = mBluetoothAdapter.getBondedDevices();
-//        if (pairedDevices.size() > 0){
-//            for (BluetoothDevice device : pairedDevices){
-//                mDevice = device;
-//                Toast.makeText(getApplicationContext(), "Smart Alarm found", Toast.LENGTH_SHORT).show();
-//            }
-//        }
-//
-//        mConnectThread = new BluetoothConnection(mDevice);
-//        mConnectThread.start();
 
     }
 

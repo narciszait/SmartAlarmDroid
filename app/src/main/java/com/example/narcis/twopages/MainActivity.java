@@ -1,6 +1,8 @@
 package com.example.narcis.twopages;
 
 import android.app.Activity;
+import android.bluetooth.BluetoothAdapter;
+import android.bluetooth.BluetoothDevice;
 import android.content.Intent;
 import android.graphics.Movie;
 import android.support.v7.app.ActionBarActivity;
@@ -10,6 +12,7 @@ import android.support.v4.app.FragmentManager;
 import android.content.Context;
 import android.os.Build;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.Menu;
@@ -20,7 +23,9 @@ import android.support.v4.widget.DrawerLayout;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
 import android.widget.TextView;
+import android.widget.Toast;
 
+import java.util.Set;
 
 
 public class MainActivity extends ActionBarActivity
@@ -35,6 +40,9 @@ public class MainActivity extends ActionBarActivity
      * Used to store the last screen title. For use in {@link #restoreActionBar()}.
      */
     private CharSequence mTitle;
+//    private BluetoothAdapter mBluetoothAdapter;
+//    BluetoothDevice mDevice;
+//    BluetoothConnection mConnectThread;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -50,6 +58,31 @@ public class MainActivity extends ActionBarActivity
                 R.id.navigation_drawer,
                 (DrawerLayout) findViewById(R.id.drawer_layout));
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+
+        //Bluetooth stuff here
+//        mBluetoothAdapter = BluetoothAdapter.getDefaultAdapter();
+//
+//        if (mBluetoothAdapter == null){
+//            Log.v("no bluetooth device", "");
+//        }
+//
+//        if (!mBluetoothAdapter.isEnabled()){
+//            Intent enableBtIntent = new Intent(BluetoothAdapter.ACTION_REQUEST_ENABLE);
+//            startActivityForResult(enableBtIntent, 1);
+//            Log.v("bluetooth enabled", "");
+//        }
+//
+//        Set<BluetoothDevice> pairedDevices = mBluetoothAdapter.getBondedDevices();
+//        if (pairedDevices.size() > 0){
+//            for (BluetoothDevice device : pairedDevices){
+//                mDevice = device;
+//                Toast.makeText(getApplicationContext(), "Smart Alarm found", Toast.LENGTH_SHORT).show();
+//            }
+//        }
+//
+//        mConnectThread = new BluetoothConnection(mDevice);
+//        mConnectThread.start();
+
     }
 
     @Override

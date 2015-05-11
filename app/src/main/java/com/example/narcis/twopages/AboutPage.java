@@ -15,25 +15,25 @@ import android.widget.Toast;
 /**
  * Created by narcis on 14/04/15.
  */
-public class Settings extends Fragment {
+public class AboutPage extends Fragment {
     View rootView;
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState){
-        rootView = inflater.inflate(R.layout.settings_layout, container, false);
+        rootView = inflater.inflate(R.layout.about_layout, container, false);
 
-        Button button = (Button)rootView.findViewById(R.id.button2);
+        Button button = (Button)rootView.findViewById(R.id.button3);
         button.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
                 /* Perform action on click */
-                Log.v("", "Settings set");
+                Log.v("", "I clicked");
 
                 AlertDialog alertDialog1 = new AlertDialog.Builder(
                         getActivity()).create();
                 // Setting Dialog Title
-                alertDialog1.setTitle("Settings");
+                alertDialog1.setTitle("About Page");
                 // Setting Dialog Message
-                alertDialog1.setMessage("You have modified settings");
+                alertDialog1.setMessage("That is who we are");
                 // Setting OK Button
                 alertDialog1.setButton("OK", new DialogInterface.OnClickListener() {
 
@@ -41,7 +41,7 @@ public class Settings extends Fragment {
                         // Write your code here to execute after dialog
                         // closed
                         Toast.makeText(getActivity(),
-                                "You have modified settings", Toast.LENGTH_SHORT).show();
+                                "You looked who made the app", Toast.LENGTH_SHORT).show();
                     }
                 });
 

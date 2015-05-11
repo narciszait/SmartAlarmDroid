@@ -4,7 +4,7 @@
     <string name="title_section1">Set Alarm</string>
     <string name="title_section2">When to wake up?</string>
     <string name="title_section3">Settings</string>
-    <!--<string name="title_section4">Hahaha</string>-->
+    <string name="title_section4">About</string>
 
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>

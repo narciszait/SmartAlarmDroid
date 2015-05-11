@@ -1,6 +1,8 @@
 package com.example.narcis.twopages;
 
 import android.app.Activity;
+import android.bluetooth.BluetoothAdapter;
+import android.bluetooth.BluetoothDevice;
 import android.content.Intent;
 import android.graphics.Movie;
 import android.support.v7.app.ActionBarActivity;
@@ -10,6 +12,7 @@ import android.support.v4.app.FragmentManager;
 import android.content.Context;
 import android.os.Build;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.Menu;
@@ -20,7 +23,9 @@ import android.support.v4.widget.DrawerLayout;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
 import android.widget.TextView;
+import android.widget.Toast;
 
+import java.util.Set;
 
 
 public class MainActivity extends ActionBarActivity
@@ -36,6 +41,7 @@ public class MainActivity extends ActionBarActivity
      */
     private CharSequence mTitle;
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -49,6 +55,9 @@ public class MainActivity extends ActionBarActivity
         mNavigationDrawerFragment.setUp(
                 R.id.navigation_drawer,
                 (DrawerLayout) findViewById(R.id.drawer_layout));
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+
+
     }
 
     @Override
@@ -69,6 +78,10 @@ public class MainActivity extends ActionBarActivity
                 //Settings
                 objFrament = new Settings();
                 break;
+            case 3:
+                //About page
+                objFrament = new AboutPage();
+                break;
         }
 
         // update the main content by replacing fragments
@@ -84,6 +97,12 @@ public class MainActivity extends ActionBarActivity
                 break;
             case 2:
                 mTitle = getString(R.string.title_section2);
+                break;
+            case 3:
+                mTitle = "Settings";
+                break;
+            case 4:
+                mTitle = "About";
                 break;
         }
     }

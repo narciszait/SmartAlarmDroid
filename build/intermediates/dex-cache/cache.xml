@@ -2,25 +2,11 @@
 <items version="2" >
 
     <item
-        jar="/Users/narcis/AndroidStudioProjects/TwoPages/app/build/intermediates/exploded-aar/com.android.support/support-v4/22.0.0/classes.jar"
-        jumboMode="false"
-        revision="21.1.2"
-        sha1="4e86306289ace4aa0cfec44a05ed2b410d36989d">
-        <dex dex="/Users/narcis/AndroidStudioProjects/TwoPages/app/build/intermediates/pre-dexed/debug/classes-3f7346f3e98fda4aa33756a3cec82ca25903baa3.jar" />
-    </item>
-    <item
         jar="/Users/narcis/Library/Android/sdk/extras/android/m2repository/com/android/support/support-annotations/22.0.0/support-annotations-22.0.0.jar"
         jumboMode="false"
         revision="21.1.2"
         sha1="685d0b2c590447e85284ed84712cb363ba04eff8">
-        <dex dex="/Users/narcis/AndroidStudioProjects/TwoPages/app/build/intermediates/pre-dexed/debug/support-annotations-22.0.0-b39f105d0220f48932b5c25d1606c97bb7acf60a.jar" />
-    </item>
-    <item
-        jar="/Users/narcis/AndroidStudioProjects/TwoPages/app/build/intermediates/exploded-aar/com.android.support/support-v4/22.0.0/libs/internal_impl-22.0.0.jar"
-        jumboMode="false"
-        revision="21.1.2"
-        sha1="b5b92f469d515a13d778900f6d50c03d12f35504">
-        <dex dex="/Users/narcis/AndroidStudioProjects/TwoPages/app/build/intermediates/pre-dexed/debug/internal_impl-22.0.0-eabe558f92634e694c26e3e0f67613b6695cd626.jar" />
+        <dex dex="/Users/narcis/git/SmartAlarmDroid/app/build/intermediates/pre-dexed/debug/support-annotations-22.0.0-b39f105d0220f48932b5c25d1606c97bb7acf60a.jar" />
     </item>
     <item
         jar="/Users/narcis/git/SmartAlarmDroid/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/22.0.0/classes.jar"
@@ -42,13 +28,6 @@
         revision="21.1.2"
         sha1="4e86306289ace4aa0cfec44a05ed2b410d36989d">
         <dex dex="/Users/narcis/git/SmartAlarmDroid/app/build/intermediates/pre-dexed/debug/classes-882947b35c213196577d2deacfb65a77233af6a7.jar" />
-    </item>
-    <item
-        jar="/Users/narcis/AndroidStudioProjects/TwoPages/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/22.0.0/classes.jar"
-        jumboMode="false"
-        revision="21.1.2"
-        sha1="d84409890828e07d344a3b9b1da545dba9897b51">
-        <dex dex="/Users/narcis/AndroidStudioProjects/TwoPages/app/build/intermediates/pre-dexed/debug/classes-29abc3b75f0259dfe987f7ae406c5eb5ef7a1301.jar" />
     </item>
 
 </items>

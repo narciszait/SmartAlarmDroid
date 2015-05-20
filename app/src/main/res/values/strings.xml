@@ -2,7 +2,7 @@
     <string name="app_name">Smart Alarm \'Em</string>
 
     <string name="title_section1">Set Alarm</string>
-    <string name="title_section2">When to wake up?</string>
+    <!--<string name="title_section2">When to wake up?</string>-->
     <string name="title_section3">Settings</string>
     <string name="title_section4">About</string>
 

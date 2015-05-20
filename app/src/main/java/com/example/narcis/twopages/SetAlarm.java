@@ -89,6 +89,10 @@ public class SetAlarm extends Fragment {
                 Toast.makeText(getActivity(), "Smart Alarm found", Toast.LENGTH_SHORT).show();
             }
         }
+        else {
+            Toast.makeText(getActivity(), "Smart Alarm not found", Toast.LENGTH_SHORT).show();
+            button.setEnabled(false);
+        }
 
 
 

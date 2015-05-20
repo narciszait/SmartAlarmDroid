@@ -4,26 +4,31 @@
         <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
                 <!-- Customize your theme here. --> <!-- Main theme colors -->
                 <!--   theme UI controls like checkboxes and text fields -->
-                <item name="android:colorAccent">#00ccff</item>
+                <!--<item name="android:colorAccent">#ffffff</item>-->
+                <!--<item name="android:colorPrimary">#811f00</item>-->
+                <!--   darker variant for the status bar and contextual app bars -->
+                <item name="android:colorPrimaryDark">#810f12</item>
+                <!--   theme UI controls like checkboxes and text fields -->
+                <!--<item name="android:colorAccent">#ffffff</item>-->
         </style>
 
         <!--<style name="Theme.MyTheme" parent="Theme.AppCompat.Light">-->
                 <!--&lt;!&ndash; customize the color palette &ndash;&gt;-->
                 <!--<item name="colorPrimary">@color/material_blue_500</item>-->
                 <!--<item name="colorPrimaryDark">@color/material_blue_700</item>-->
-                <!--<item name="colorAccent">@color/material_green_A200</item>-->
+                <!--<item name="colorAccent">@color/rmaterial_green_A200</item>-->
         <!--</style>-->
 
-        <style name="btnStyleGenoa" parent="@android:style/Widget.Button">
-                <item name="android:textSize">15sp</item>
-                <item name="android:textStyle">bold</item>
-                <item name="android:textColor">#FFFFFF</item>
-                <item name="android:gravity">center</item>
-                <item name="android:shadowColor">#000000</item>
-                <item name="android:shadowDx">1</item>
-                <item name="android:shadowDy">1</item>
-                <item name="android:shadowRadius">0.6</item>
-                <item name="android:background">@drawable/custon_btn_genoa</item>
-                <item name="android:padding">10dip</item>
-        </style>
+        <!--<style name="btnStyleGenoa" parent="@android:style/Widget.Button">-->
+                <!--<item name="android:textSize">15sp</item>-->
+                <!--<item name="android:textStyle">bold</item>-->
+                <!--&lt;!&ndash;<item name="android:textColor">#FFFFFF</item>&ndash;&gt;-->
+                <!--<item name="android:gravity">center</item>-->
+                <!--&lt;!&ndash;<item name="android:shadowColor">#000000</item>&ndash;&gt;-->
+                <!--<item name="android:shadowDx">1</item>-->
+                <!--<item name="android:shadowDy">1</item>-->
+                <!--<item name="android:shadowRadius">0.6</item>-->
+                <!--&lt;!&ndash;<item name="android:background">@drawable/custon_btn_genoa</item>&ndash;&gt;-->
+                <!--<item name="android:padding">10dip</item>-->
+        <!--</style>-->
 </resources>

@@ -5,6 +5,7 @@ import android.bluetooth.BluetoothAdapter;
 import android.bluetooth.BluetoothDevice;
 import android.content.Intent;
 import android.graphics.Movie;
+import android.graphics.drawable.ColorDrawable;
 import android.support.v7.app.ActionBarActivity;
 import android.support.v7.app.ActionBar;
 import android.support.v4.app.Fragment;
@@ -57,7 +58,7 @@ public class MainActivity extends ActionBarActivity
                 (DrawerLayout) findViewById(R.id.drawer_layout));
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
-
+        getSupportActionBar().setBackgroundDrawable(new ColorDrawable(0xff810f12));
     }
 
     @Override
@@ -70,15 +71,15 @@ public class MainActivity extends ActionBarActivity
                 //Set Alarm
                 objFrament = new SetAlarm();
                 break;
+//            case 1:
+//                //When to wake up
+//                objFrament = new WakeUp();
+//                break;
             case 1:
-                //When to wake up
-                objFrament = new WakeUp();
-                break;
-            case 2:
                 //Settings
                 objFrament = new Settings();
                 break;
-            case 3:
+            case 2:
                 //About page
                 objFrament = new AboutPage();
                 break;
@@ -95,13 +96,13 @@ public class MainActivity extends ActionBarActivity
             case 1:
                 mTitle = getString(R.string.title_section1);
                 break;
+//            case 2:
+//                mTitle = getString(R.string.title_section2);
+//                break;
             case 2:
-                mTitle = getString(R.string.title_section2);
-                break;
-            case 3:
                 mTitle = "Settings";
                 break;
-            case 4:
+            case 3:
                 mTitle = "About";
                 break;
         }

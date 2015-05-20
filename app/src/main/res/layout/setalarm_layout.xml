@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent" android:layout_height="match_parent"
-    android:background="#00ccff">
+    android:layout_width="match_parent" android:layout_height="match_parent">
 
     <TextView
         android:layout_width="wrap_content"
@@ -20,8 +19,8 @@
         android:id="@+id/button"
         android:layout_below="@+id/timePicker"
         android:layout_alignLeft="@+id/textView"
-        android:layout_alignStart="@+id/textView"
-        style="@style/btnStyleGenoa" />
+        android:layout_alignStart="@+id/textView" />
+    <!--style="@style/btnStyleGenoa"-->
 
     <TimePicker
         android:layout_width="wrap_content"
@@ -29,6 +28,13 @@
         android:id="@+id/timePicker"
         android:layout_centerVertical="true"
         android:layout_centerHorizontal="true"
-        android:timePickerMode="clock" />
+        android:timePickerMode="clock"
+        android:touchscreenBlocksFocus="false"
+        android:numbersTextColor="#000000"
+        android:numbersBackgroundColor="#ffffff"
+        android:numbersSelectorColor="#000000"
+        android:headerBackground="#810f12"
+        style="@style/AppTheme"
+        />
 
 </RelativeLayout>

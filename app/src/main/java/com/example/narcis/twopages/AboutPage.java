@@ -40,7 +40,7 @@ public class AboutPage extends Fragment {
         button.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
 
-                
+
 
                 /* Perform action on click */
                 Log.v("", "I clicked");

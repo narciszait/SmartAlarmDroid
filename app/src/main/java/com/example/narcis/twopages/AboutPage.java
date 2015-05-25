@@ -13,6 +13,8 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.view.animation.AlphaAnimation;
+import android.view.animation.Animation;
+import android.view.animation.AnimationUtils;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.Toast;
@@ -28,43 +30,47 @@ public class AboutPage extends Fragment {
     private AlphaAnimation alphaUp;
     @Nullable
     @Override
-//    @TargetApi(Build.VERSION_CODES.ICE_CREAM_SANDWICH)
+
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState){
         rootView = inflater.inflate(R.layout.about_layout, container, false);
 
         Button button = (Button)rootView.findViewById(R.id.button3);
         final ImageView usImageView = (ImageView)rootView.findViewById(R.id.usImageView);
+        usImageView.setVisibility(View.INVISIBLE);
 
+        final Animation a = new AlphaAnimation(0.00f, 1.00f);
+
+        a.setDuration(5000);
+        a.setAnimationListener(new Animation.AnimationListener() {
+
+            public void onAnimationStart(Animation animation) {
+
+            }
+
+            public void onAnimationRepeat(Animation animation) {
+
+            }
+
+            public void onAnimationEnd(Animation animation) {
+                usImageView.setVisibility(View.VISIBLE);
+            }
+        });
 
 
         button.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
+                counter++;
+                if (counter % 5 == 0) {
+
+                    usImageView.startAnimation(a);
+
+                    Log.v("", "I clicked");
+                    Log.v("counter: ", Integer.toString(counter));
 
 
-
-                /* Perform action on click */
-                Log.v("", "I clicked");
-                Log.v("counter: ", Integer.toString(counter));
-
-                AlertDialog alertDialog1 = new AlertDialog.Builder(
-                        getActivity()).create();
-                // Setting Dialog Title
-                alertDialog1.setTitle("About Page");
-                // Setting Dialog Message
-                alertDialog1.setMessage("That is who we are");
-                // Setting OK Button
-                alertDialog1.setButton("OK", new DialogInterface.OnClickListener() {
-
-                    public void onClick(DialogInterface dialog, int which) {
-                        // Write your code here to execute after dialog
-                        // closed
-                        Toast.makeText(getActivity(),
-                                "You looked who made the app", Toast.LENGTH_SHORT).show();
-                    }
-                });
-
-                // Showing Alert Message
-                alertDialog1.show();
+                    Toast.makeText(getActivity(),
+                            "This is a part of us", Toast.LENGTH_SHORT).show();
+                }
             }
         });
 
